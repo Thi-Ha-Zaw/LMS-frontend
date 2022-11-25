@@ -14,7 +14,7 @@
        }
 
        body{
-        background: rgb(63, 63, 63)!important;
+        background: #017e84!important;
        }
 
        /* .row{
@@ -26,6 +26,7 @@
 </head>
 <body>
     
+    <div id="loader"></div>
     <section class=" form my-5 mx-5">
         <div class="container">
             <div class="row bg-white g-0 py-5 px-3 rounded-5">
@@ -63,5 +64,12 @@
         </div>
     </section>
     <script type="module" src="/main.js"></script>
+    
 </body>
+<script>
+    let loader = document.getElementById("loader");
+    window.addEventListener("load", function () {
+      loader.style.display = "none";
+    });
+</script>
 </html>

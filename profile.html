@@ -12,8 +12,9 @@
     </style>
 </head>
 <body>
-    
-    <h1 class=" cus-font mt-3 mb-5 text-center animate__animated animate__tada">YOur Profile</h1>
+
+    <div id="loader"></div>
+    <h1 class=" cus-font mt-3 mb-5 text-center animate__animated animate__tada ">Your Profile</h1>
     <section class=" container">
         <div class="row ">
             <div class=" col-12 col-md-6 col-lg-4">
@@ -143,5 +144,11 @@
     </section>
 
     <script type="module" src="/main.js"></script>
+    <script>
+        let loader = document.getElementById("loader");
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+    </script>
 </body>
 </html>

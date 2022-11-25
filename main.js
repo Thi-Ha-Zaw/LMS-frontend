@@ -7,15 +7,15 @@ import Swal from 'sweetalert2';
 import 'animate.css';
 
 
-let typed = new Typed('.element', {
-    strings: ["Learning Application","Learning Programming"],
-    typeSpeed: 30,
-    backSpeed: 20,
-    backDelay: 1500,
-    loop: true,
-    showCursor: true,
-    // cursorChar: '|',
-  });
+// let typed = new Typed('.element', {
+//     strings: ["Learning Application","Learning Programming"],
+//     typeSpeed: 30,
+//     backSpeed: 20,
+//     backDelay: 1500,
+//     loop: true,
+//     showCursor: true,
+//     // cursorChar: '|',
+//   });
 
 
 

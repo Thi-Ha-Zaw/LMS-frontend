@@ -6,42 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DetailCourse</title>
     <style>
-       body{
-            background-color: #ffffff!important;
-        }
+      :root{
+        --main-color:#000;
+        --second-color:#fff;
+      }
+      body{
+        background:var(--second-color)!important;
+      }
+      .White{
+        background:var(--second-color)!important;
+      }
+      .Black{
+        color: var(--main-color);
+      }
+      .dark-theme{
+        --main-color:#fff!important;
+        --second-color:#000!important;
+      }
     </style>
 </head>
 <body>
+
+    <div id="loader"></div>
    
-    <nav class="navbar  navbar-expand-lg fixed-top position-fixed bg-light">
+    <nav class="navbar  navbar-expand-lg White sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand pb-3 ms-5" href="#">
           <img width="112" height="29" src="https://geeks.madrasthemes.com/wp-content/uploads/2021/09/logo.svg" class="custom-logo" alt="Geeks">
+          
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li>
+                <!-- <a href="#" class=" btn" id="click">
+                    <img src="./images/night.png" alt="" class="light-dark-icon" id="iCon">
+                </a> -->
+              </li>
             </ul>
             <div class=" me-5 text-center text-lg-start">
                 <div class="dropdown">
-                    <button class="btn btn-white dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class=" bi bi-person"></i>
+                    <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=" bi bi-person Black"></i>
                     </button>
                     <ul class=" dropdown-menu dropdown-menu-start">
                       <li class=" text-start"><a class="dropdown-item" href="profile.html">Your Profile</a></li>
                     </ul>
                   </div>
             </div>
-            <div class=" ps-5"></div>
+            <!-- <div class=" ps-5"></div> -->
           </div>
         </div>
       </nav>
    <section class="">
     <div class=" container">
-        <div class="row min-vh-100 align-items-start mt-100 bg-white">
+        <div class="row min-vh-100 align-items-start mt-100 White">
             <div class="col-12 col-md-12 col-lg-9">
                <div class="row mb-4 mb-lg-0">
                     <div class=" mb-3">
@@ -53,8 +74,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center ">
                         <div class="">
-                            <h3 class=" cus-font text-black">Create Login Form</h3>
-                            <p class=" text-black-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore repellat, cum quo, vitae pariatur rerum distinctio maiores nihil nam accusantium aspernatur impedit odio! Sit amet, aut cumque laboriosam totam aspernatur!
+                            <h3 class=" cus-font Black">Create Login Form</h3>
+                            <p class=" Black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore repellat, cum quo, vitae pariatur rerum distinctio maiores nihil nam accusantium aspernatur impedit odio! Sit amet, aut cumque laboriosam totam aspernatur!
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore repellat, cum quo, vitae pariatur rerum distinctio maiores nihil nam accusantium aspernatur impedit odio! Sit amet, aut cumque laboriosam totam aspernatur!
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore repellat, cum quo, vitae pariatur rerum distinctio maiores nihil nam accusantium aspernatur impedit odio! Sit amet, aut cumque laboriosam totam aspernatur!
                             </p>
@@ -65,7 +86,7 @@
                </div>
             </div>
             <div class="col-12 col-md-12 col-lg-3">
-               <div class="row mx-2 mx-lg-0 w-100 shadow" >
+               <div class="row mx-2 mx-lg-0 w-100 shadow-sm" >
                     <ul class=" list-group " style="height: 500px;">
                         <li class=" list-group-item movie-li list-style-none px-0 bg-light">
                             <h4 class=" text-black text-center fw-bold">Courses Overview</h4>
@@ -162,5 +183,24 @@
 
 
     <script type="module" src="/main.js"></script>
+    <script>
+        let Click = document.getElementById("click");
+        let Icon = document.getElementById("iCon");
+        Click.addEventListener("click",function(){
+           console.log( document.body.classList.toggle("dark-theme"))
+           if(document.body.classList.contains("dark-theme")){
+            Icon.src = './images/moonBgnight.jpg';
+           }else{
+            Icon.src = './images/night.png';
+           }
+        });
+    
+    </script>
 </body>
+<script>
+    let loader = document.getElementById("loader");
+    window.addEventListener("load", function () {
+      loader.style.display = "none";
+    });
+</script>
 </html>

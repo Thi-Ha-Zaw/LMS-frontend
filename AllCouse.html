@@ -18,6 +18,7 @@
 </head>
 <body>
     
+  <div id="loader"></div>
   
     <section class=" bg-light " id="popular-courses">
         <div class=" container-fluid">
@@ -123,6 +124,13 @@
                         </div>
                     `;
     </script>
+
     
 </body>
+<script>
+  let loader = document.getElementById("loader");
+  window.addEventListener("load", function () {
+    loader.style.display = "none";
+  });
+</script>
 </html>
