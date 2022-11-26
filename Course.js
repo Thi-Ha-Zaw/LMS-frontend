@@ -17,7 +17,7 @@
     },
     {
         id: 5,
-        image : "./images/five.jpg"
+        image : "./images/five.jpg" 
     },
     {
         id: 6,
