@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
+
+
 $font-family-sans-serif:'Raleway', sans-serif;
 $font-family-sans-serif:'Fasthand', 'cursive';
 *{
@@ -13,7 +15,7 @@ $font-family-sans-serif:'Fasthand', 'cursive';
 $primary :#017e84;
 $warning : #ffe055;
 $success : #fff;
-$navbar-padding-y: 1.2rem;
+$navbar-padding-y: 0.6rem;
 $navbar-nav-link-padding-x : 0.7rem;
 $nav-link-font-size : 1.1rem;
 $navbar-brand-padding-y : 0.5rem;
@@ -30,15 +32,18 @@ $btn-padding-y-lg: 5px;
 
 
 
+
 @import "./node_modules/glider-js/glider.min.css";
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 @import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "./node_modules/animate.css/animate.min.css";
 
-.nav-link{
-    color: #fff!important;
-    &:hover{
-        color: #264653!important;
+.navbar{
+    .nav-link{
+        color: #fff!important;
+        &:hover{
+            color: #264653!important;
+        }
     }
 }
 
@@ -52,9 +57,6 @@ $btn-padding-y-lg: 5px;
     }
 }
 
-// .Browse-img{
-//     background-color: $primary!important;
-// }
 
 .Instructor-Btn{
     padding: 15px 20px;
@@ -81,11 +83,43 @@ $btn-padding-y-lg: 5px;
     border:1px solid white ;
 }
 
+@include media-breakpoint-down(md){
+    .glider-pre{
+        margin-right: -15px;
+    }
+
+    .glider-nex{
+        margin-right: -5px;
+    }
+
+    #LogIn{
+        width: 100%;
+    }
+
+    #SignUp{
+        width: 100%;
+    }
+
+    .nav-item{
+        border-bottom: 1px solid white;
+    }
+
+    .Browse-Btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Instructor-Btn{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
 .glider-next{
     top: 0;
     bottom: 0;
     margin: auto;
-    // right: -25px;
     width: 40px;
     height: 40px;
     background: $white;
@@ -101,14 +135,21 @@ $btn-padding-y-lg: 5px;
     border-radius: 50%;
     border:1px solid white ;
 }
-.item-img{
-    width: 100%!important;
-    height: 200px;
-    // object-fit: cover;
-    // object-position: top;
-    overflow: hidden;
-    transition: 0.3s;
+
+.img-card{
+	height: 450px !important;
+	overflow: hidden;
+	border-radius: 8px !important;
+
+	.item-img{
+		width: 100%!important;
+		height: 200px;
+		overflow: hidden;
+		transition: 0.3s;
+		
+	}
 }
+
 
 .avater-img{
     width: 40px;
@@ -125,11 +166,19 @@ $btn-padding-y-lg: 5px;
         height: 200px;
         object-fit: cover;
         object-position: top;
+        transition: 0.5s;
+        transition-duration: 1s;
+        overflow: hidden;
     }
-    transition: 0.7s;
+    border-radius: 15px;
+    overflow: hidden;
     &:hover{
-        transform: translateY(-15px);
+        .blog-img{
+            transform: scale(1.07);
+        }
     }
+
+
 }
 
 .mb-150{
@@ -142,7 +191,6 @@ $btn-padding-y-lg: 5px;
 
 .form-img{
     border-radius: 15px 0px 0px 15px;
-    // height: 500px;
 }
 
 ul{
@@ -151,19 +199,11 @@ ul{
         transition: 0.3s; 
     }
     .movie-li:hover{
-        background-color: $gray-500;
-        color: white;
-        transform: translateY(-7px);
+        background-color: $gray-200;
+        
     }
 }
 
-.listItemGp{
-    background-color: $light;
-    li{
-        background-color: whitesmoke;
-        // color: white!important;
-    }
-}
 
 .profile-img{
     width: 200px;
@@ -175,7 +215,6 @@ ul{
 }
 
 table{
-    // margin: 0px!important;
     td{
         padding: 15px;
         border-bottom: 1px solid rgb(106, 106, 106);
@@ -191,30 +230,26 @@ table{
     background-color: #39bdc8;
 }
 
-@include media-breakpoint-down(md) {
-
-    .Browse-Btn{
-        width: 100%;
-        text-align: center;
-    }
-
-    .Instructor-Btn{
-        width: 100%;
-        text-align: center;
-    }
-
-}
-
 .light-dark-icon{
     height: 30px;
 }
 
+.navbar-toggler{
+    border: 2px solid white!important;
+    background-color: white!important;
+}
 
-#loader{
-    background: rgb(255, 255, 255) url("./images/preloader.gif") no-repeat center center!important;
-    min-width: 100%!important;
-    min-height: 100vh!important;
-    position: fixed!important;
-    z-index: 2000000!important;
+.font{
+    font-size: 17px !important;
+    font-weight: 550 !important;
+}
+
+.course-link{
+    transition: 0.3s;
+    transition-duration: 100ms;
+    &:hover{
+        color: rgb(105, 105, 105);
+        font-weight: 600;
+    }
 }
 

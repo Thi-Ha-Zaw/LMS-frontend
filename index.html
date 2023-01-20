@@ -1,884 +1,892 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://metatags.io/" />
-    <meta property="og:title" content="LMS-fontend" />
-    <meta property="og:description" content="Learning Management System" />
-    <meta
-      property="og:image"
-      content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-    />
-  </head>
-  <body>
-    <div id="loader"></div>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learning Management System</title>
+		<style>
+			#loader{
+		background: rgb(255, 255, 255) url("./images/preloader.gif") no-repeat center center!important;
+		min-width: 100%!important;
+		min-height: 100vh!important;
+		position: fixed!important;
+		z-index: 2000000!important;
+	} 
+		</style>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://metatags.io/" />
+		<meta property="og:title" content="LMS-fontend" />
+		<meta property="og:description" content="Learning Management System" />
+		<meta
+			property="og:image"
+			content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+		/>
+	</head>
+	<body>
+		<div id="loader"></div>
+		<nav class="navbar navbar-expand-lg  bg-primary sticky-top">
+			<div class="container-fluid">
+				<a class="navbar-brand pb-3 me-5" href="#">
+					<!-- <img width="112" height="29" src="https://geeks.madrasthemes.com/wp-content/uploads/2021/09/logo.svg" class="custom-logo" alt="Geeks"/> -->
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center text-lg-start">
+						<li class="nav-item">
+							<a class="nav-link" href="#Home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#Blog">Blog</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#Home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Courses
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a class="dropdown-item" href="AllCouse.html">All Courses</a>
+								</li>
+								<li><hr class="dropdown-divider" /></li>
+								<li>
+									<a class="dropdown-item" href="#popular-courses"
+										>Popular Courses</a
+									>
+								</li>
+								<li><hr class="dropdown-divider" /></li>
+								<li>
+									<a class="dropdown-item" href="#free-courses">Free Courses</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item me-2">
+							<a class="nav-link" href="profile.html">Profile</a>
+						</li>
+					</ul>
+					<div class=" me-0 me-lg-2">
+						<!-- <a
+							href="#"
+							class="btn btn-outline-primary btn-lg border-0 shadow-sm"
+							id="UserSignIn"
+							>Sign In</a
+						> -->
+						<a href="form.html" class="btn btn-success btn-lg" type="submit" id="SignUp"
+							>Sign Up</a
+						>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="bg-white" id="Home">
+			<div class="container">
+				<div class="row min-vh-100 justify-content-center align-items-center d-flex flex-column-reverse flex-lg-row slide-down">
+					<div class="col-12 col-lg-6">
+						<div class="row mt-0 mt-lg-5 slide-down">
+							<h1 class="display-5 fw-bold slide-down">
+								Welcome to Geeks UI Learning Application
+							</h1>
+							<h3 class="text-black-50 mt-3 mb-3 mb-lg-4 slide-down">
+								Hand-picked Instructor and expertly crafted courses, designed
+								for the modern students and entrepreneur.
+							</h3>
+							<div class="slide-down">
+								<button
+									class="btn btn-success border-0 shadow-sm rounded-4 btn-lg Browse-Btn mb-2 mb-lg-0"
+								>
+									Browse Courses
+								</button>
+								<button
+									class="btn btn-primary border-0 shadow-sm rounded-4 btn-lg Instructor-Btn"
+								>
+									Are You Instructor?
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="row mb-0 mb-lg-5 slide-down">
+							<div class="slide-down">
+								<div class="mb-0 mb-md-5">
+									<lottie-player
+										src="https://assets9.lottiefiles.com/private_files/lf30_gcroxmlt.json"
+										background="transparent"
+										speed="1"
+										style="width: 100%; height: 600px"
+										loop
+										autoplay
+									></lottie-player>
+								</div>
+								<div class="pt-0 pt-lg-5"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-light" id="popular-courses">
+			<div class="container">
+				<div
+					class="row min-vh-100 justify-content-center align-items-center slide-down"
+				>
+					<div class="col-12 col-lg-12">
+						<div class="glider-contain">
+							<div class="mb-4 text-center text-lg-start">
+								<h3>Most Popular</h3>
+							</div>
+							<div class="glider-width">
+								<button class="glider-prev">
+									<i class="bi bi-arrow-left-short"></i>
+								</button>
+							</div>
+							<div class="glider">
+								<div class="card mx-3 img-card border-0 shadow">
+									<div class="">
+										<img
+											src="./images/1015293_OJ91BD0.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											<!-- Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et? -->
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/beautiful-smiling-asian-girl-showing-thumb-up-approve-smth-good-agree-recommending-company-brand-sta.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow">
+									<div class="">
+										<img
+											src="./images/10782951_19199360.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/business-finance-employment-female-successful-entrepreneurs-concept-friendly-smiling-office-manager-greeting-new-coworker-businesswoman-welcome-clients-with-hand-wave-hold-laptop.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow">
+									<div class="">
+										<img
+											src="./images/12063795_4884785.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/business-finance-employment-female-successful-entrepreneurs-concept-professional-asian-businesswoman-glasses-having-lunch-drinking-takeaway-coffee-using-mobile-phone.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow">
+									<div class="">
+										<img
+											src="./images/21585996_Na_Nov_02.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/glad-fashionable-woman-dressed-checkered-jacket-browses-internet-modern-device-sends-text-messages-via-smartphone-has-glad-expression-isolated-pink-background-technologies-concept.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow">
+									<div class="">
+										<img
+											src="./images/28694857_frontend_online_1.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/business-people-holding-word-careers.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="glider-width">
+								<button class="glider-next">
+									<i class="bi bi-arrow-right-short"></i>
+								</button>
+							</div>
+							<div class="dots"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white" id="free-courses">
+			<div class="container">
+				<div
+					class="row min-vh-100 justify-content-center align-items-center align-content-center slide-down"
+				>
+					<div class="col-12">
+						<div class="text-center my-5 slide-down">
+							<h3 class="">Free Courses</h3>
+						</div>
+					</div>
+					<div class="col-12 col-lg-12">
+						<div class="d-flex justify-content-center align-items-center">
+							<div class="glider-width">
+								<button class="glider-pre">
+									<i class="bi bi-arrow-left"></i>
+								</button>
+							</div>
+							<div class="Glider">
+								<div class="card mx-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/1015293_OJ91BD0.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/beautiful-smiling-asian-girl-showing-thumb-up-approve-smth-good-agree-recommending-company-brand-sta.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/10782951_19199360.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/business-finance-employment-female-successful-entrepreneurs-concept-friendly-smiling-office-manager-greeting-new-coworker-businesswoman-welcome-clients-with-hand-wave-hold-laptop.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/12063795_4884785.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/business-finance-employment-female-successful-entrepreneurs-concept-professional-asian-businesswoman-glasses-having-lunch-drinking-takeaway-coffee-using-mobile-phone.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/21585996_Na_Nov_02.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/glad-fashionable-woman-dressed-checkered-jacket-browses-internet-modern-device-sends-text-messages-via-smartphone-has-glad-expression-isolated-pink-background-technologies-concept.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/28694857_frontend_online_1.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+								<div class="card me-3 img-card border-0 shadow-sm">
+									<div class="">
+										<img
+											src="./images/business-people-holding-word-careers.jpg"
+											alt=""
+											class="item-img"
+										/>
+									</div>
+									<div class="card-body">
+										<p class="my-3">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
+											enim numquam libero nesciunt et?
+										</p>
+									</div>
+									<div
+										class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
+									>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											<img
+												src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
+												alt=""
+												class="avater-img"
+											/>
+											<p class="mb-0 ms-2">JustinBiber</p>
+										</div>
+										<a
+											href="OverViewCourse.html"
+											class="FullCourse-Btn btn btn-primary"
+										>
+											View
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="glider-width">
+								<button class="glider-nex">
+									<i class="bi bi-arrow-right"></i>
+								</button>
+							</div>
+							<div class="dots"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="Blog" class=" bg-light">
+			<div class="container">
+				<div class="row min-vh-100 justify-content-center align-content-center">
+					<div class="col-12">
+						<div class="text-center my-5 slide-down text-uppercase">
+							<h3 class="cus-font">Recommend to you</h3>
+						</div>
+					</div>
+					<div class="col-12 col-md-12 col-lg-3 slide-down">
+						<div class="card border-0 shadow-sm rounded-3 blog-card ">
+							<div class="">
+								<img
+									src="./images/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation.jpg"
+									alt=""
+									class="w-100 blog-img"
+								/>
+							</div>
+							<div class="card-body">
+								<p class="">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Molestiae eum neque quia provident? Eveniet necessitatibus
+									nobis accusantium dolore deleniti, praesentium omnis ea fuga
+									incidunt quisquam suscipit voluptatum reiciendis? Sequi,
+									tempore.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-12 col-lg-3 slide-down">
+						<div
+							class="card border-0 shadow-sm rounded-3 mt-4 mt-lg-0 blog-card"
+						>
+							<div class="">
+								<img
+									src="./images/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room.jpg"
+									alt=""
+									class="w-100 blog-img"
+								/>
+							</div>
+							<div class="card-body">
+								<p class="">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Molestiae eum neque quia provident? Eveniet necessitatibus
+									nobis accusantium dolore deleniti, praesentium omnis ea fuga
+									incidunt quisquam suscipit voluptatum reiciendis? Sequi,
+									tempore.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-12 col-lg-3 slide-down">
+						<div
+							class="card border-0 shadow-sm rounded-3 mt-4 mt-lg-0 blog-card"
+						>
+							<div class="">
+								<img
+									src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
+									alt=""
+									class="w-100 blog-img"
+								/>
+							</div>
+							<div class="card-body">
+								<p class="">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Molestiae eum neque quia provident? Eveniet necessitatibus
+									nobis accusantium dolore deleniti, praesentium omnis ea fuga
+									incidunt quisquam suscipit voluptatum reiciendis? Sequi,
+									tempore.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="mb-150 mt-5">
+			<div class="container">
+				<div class="row text-center justify-content-center mb-5">
+					<div class="col-lg-5 col-xl-6">
+						<div>
+							<h4>Frequently Asked Questions</h4>
+							<p class="text-black-50 my-3">
+								Our aim is to make it quick and easy for you to access your
+								favourite websites. Your bookmarks sync between your devices so
+								you can access them on the go.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div>
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingOne">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseOne"
+											aria-expanded="false"
+											aria-controls="flush-collapseOne"
+										>
+											What is Bookmark?
+										</button>
+									</h2>
+									<div
+										id="flush-collapseOne"
+										class="accordion-collapse collapse"
+										aria-labelledby="flush-headingOne"
+										data-bs-parent="#accordionFlushExample"
+									>
+										<div class="accordion-body">
+											Placeholder content for this accordion, which is intended
+											to demonstrate the <code>.accordion-flush</code> class.
+											This is the first item's accordion body.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingTwo">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseTwo"
+											aria-expanded="false"
+											aria-controls="flush-collapseTwo"
+										>
+											How can I request a new browser?
+										</button>
+									</h2>
+									<div
+										id="flush-collapseTwo"
+										class="accordion-collapse collapse"
+										aria-labelledby="flush-headingTwo"
+										data-bs-parent="#accordionFlushExample"
+									>
+										<div class="accordion-body">
+											Placeholder content for this accordion, which is intended
+											to demonstrate the <code>.accordion-flush</code> class.
+											This is the second item's accordion body. Let's imagine
+											this being filled with some actual content.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingThree">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseThree"
+											aria-expanded="false"
+											aria-controls="flush-collapseThree"
+										>
+											Is there a mobile app?
+										</button>
+									</h2>
+									<div
+										id="flush-collapseThree"
+										class="accordion-collapse collapse"
+										aria-labelledby="flush-headingThree"
+										data-bs-parent="#accordionFlushExample"
+									>
+										<div class="accordion-body">
+											Placeholder content for this accordion, which is intended
+											to demonstrate the <code>.accordion-flush</code> class.
+											This is the third item's accordion body. Nothing more
+											exciting happening here in terms of content, but just
+											filling up the space to make it look, at least at first
+											glance, a bit more representative of how this would look
+											in a real-world application.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingFour">
+										<button
+											class="accordion-button collapsed"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseFour"
+											aria-expanded="false"
+											aria-controls="flush-collapseFour"
+										>
+											What about other Chromium browsers?
+										</button>
+									</h2>
+									<div
+										id="flush-collapseFour"
+										class="accordion-collapse collapse"
+										aria-labelledby="flush-headingFour"
+										data-bs-parent="#accordionFlushExample"
+									>
+										<div class="accordion-body">
+											Placeholder content for this accordion, which is intended
+											to demonstrate the <code>.accordion-flush</code> class.
+											This is the third item's accordion body. Nothing more
+											exciting happening here in terms of content, but just
+											filling up the space to make it look, at least at first
+											glance, a bit more representative of how this would look
+											in a real-world application.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class=""></div>
+				<button class="btn btn-primary d-block mx-auto mt-5">More Info</button>
+			</div>
+		</section>
+		<section class="container-fluid">
+			<div class="row text-center justify-content-center bg-light">
+				<div class="col-lg-5 col-xl-3">
+					<div>
+						<p class="text-black-50 mb-4 mt-5">35,000+ already joined</p>
+						<h3 class="text-black mb-4">
+							Stay up-to-date with what we’re doing
+						</h3>
+					</div>
+					<div
+						class="d-flex flex-column flex-lg-row mb-5 justify-content-center"
+					>
+						<div class="me-3 mb-4 mb-lg-0">
+							<input type="text" class="form-control" />
+						</div>
+						<div>
+							<a href="#" class="btn btn-danger">Contact us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!-- <footer class=" bg-dark">
+			<div class=" container">
+				<div class=" row pt-4 pb-2">
+					<div class="col-lg-2 ">
+						<div class=" text-center mb-3 mb-lg-0">
+						<svg width="148" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path style="fill: #fff;" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg>
+						</div>
+					</div>
+					<div class="col-lg-6 ">
+						<div class=" d-flex flex-column flex-lg-row text-center justify-content-lg-start">
+							<a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">Features</a>
+							<a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">Pricing</a>
+							<a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">contact</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class=" d-flex justify-content-center flex-column flex-lg-row justify-content-lg-end ">
+							<a href="#" class="  btn border-0 "><img src="./images/icon-facebook.svg" alt="" height="20px" class=" me-0 me-lg-5 mb-3"></a>
+							<a href="#" class="  btn border-0"><img src="./images/icon-twitter.svg" alt="" height="20px" class=" me-0 me-lg-5 mb-3 "></a>
+						</div>
+					</div>
 
-    <nav class="navbar navbar-expand-lg  bg-primary sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand pb-3 me-5" href="#">
-          <!-- <img width="112" height="29" src="https://geeks.madrasthemes.com/wp-content/uploads/2021/09/logo.svg" class="custom-logo" alt="Geeks"/> -->
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#Home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Blog">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#page" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Courses
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="AllCouse.html">All Courses</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#popular-courses"
-                    >Popular Courses</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#free-courses">Free Courses</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item me-2">
-              <a class="nav-link" href="profile.html">Profile</a>
-            </li>
-          </ul>
-          <div class="">
-            <!-- <a
-              href="#"
-              class="btn btn-outline-primary btn-lg border-0 shadow-sm"
-              id="UserSignIn"
-              >Sign In</a
-            > -->
-            <a href="form.html" class="btn btn-success btn-lg" type="submit"
-              >Sign Up</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
-    <section class="bg-white" id="Home">
-      <div class="container">
-        <div class="row min-vh-100 justify-content-center align-items-center d-flex flex-column-reverse flex-lg-row">
-          <div class="col-12 col-lg-6">
-            <div class="row mt-0 mt-lg-5">
-              <h1 class="display-5 fw-bold slide-down">
-                Welcome to Geeks UI Learning Application
-              </h1>
-              <h3 class="text-black-50 mt-3 mb-3 mb-lg-4 slide-down">
-                Hand-picked Instructor and expertly crafted courses, designed
-                for the modern students and entrepreneur.
-              </h3>
-              <div class="slide-down">
-                <button
-                  class="btn btn-success border-0 shadow-sm rounded-4 btn-lg Browse-Btn mb-2 mb-lg-0"
-                >
-                  Browse Courses
-                </button>
-                <button
-                  class="btn btn-primary border-0 shadow-sm rounded-4 btn-lg Instructor-Btn"
-                >
-                  Are You Instructor?
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="row mb-0 mb-lg-5">
-              <div class="slide-down">
-                <div class="mb-0 mb-lg-5">
-                  <lottie-player
-                    src="https://assets9.lottiefiles.com/private_files/lf30_gcroxmlt.json"
-                    background="transparent"
-                    speed="1"
-                    style="width: 100%; height: 800px"
-                    loop
-                    autoplay
-                  ></lottie-player>
-                </div>
-                <div class="pt-0 pt-lg-5"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-light" id="popular-courses">
-      <div class="container">
-        <div
-          class="row min-vh-100 justify-content-center align-items-center slide-down"
-        >
-          <div class="col-12 col-lg-12">
-            <div class="glider-contain">
-              <div class="mb-4 text-center text-lg-start">
-                <h3>Most Popular</h3>
-              </div>
-              <div class="glider-width">
-                <button class="glider-prev">
-                  <i class="bi bi-arrow-left-short"></i>
-                </button>
-              </div>
-              <div class="glider">
-                <div class="card mx-3 img-card border-0 shadow">
-                  <div class="">
-                    <img
-                      src="./images/1015293_OJ91BD0.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/beautiful-smiling-asian-girl-showing-thumb-up-approve-smth-good-agree-recommending-company-brand-sta.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow">
-                  <div class="">
-                    <img
-                      src="./images/10782951_19199360.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/business-finance-employment-female-successful-entrepreneurs-concept-friendly-smiling-office-manager-greeting-new-coworker-businesswoman-welcome-clients-with-hand-wave-hold-laptop.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow">
-                  <div class="">
-                    <img
-                      src="./images/12063795_4884785.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/business-finance-employment-female-successful-entrepreneurs-concept-professional-asian-businesswoman-glasses-having-lunch-drinking-takeaway-coffee-using-mobile-phone.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow">
-                  <div class="">
-                    <img
-                      src="./images/21585996_Na_Nov_02.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/glad-fashionable-woman-dressed-checkered-jacket-browses-internet-modern-device-sends-text-messages-via-smartphone-has-glad-expression-isolated-pink-background-technologies-concept.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow">
-                  <div class="">
-                    <img
-                      src="./images/28694857_frontend_online_1.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card">
-                  <div class="">
-                    <img
-                      src="./images/business-people-holding-word-careers.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="glider-width">
-                <button class="glider-next">
-                  <i class="bi bi-arrow-right-short"></i>
-                </button>
-              </div>
-              <div class="dots"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-white" id="free-courses">
-      <div class="container">
-        <div
-          class="row min-vh-100 justify-content-center align-items-center align-content-center slide-down"
-        >
-          <div class="col-12">
-            <div class="text-center my-5 slide-down">
-              <h3 class="">Free Courses</h3>
-            </div>
-          </div>
-          <div class="col-12 col-lg-12">
-            <div class="d-flex justify-content-center align-items-center">
-              <div class="glider-width">
-                <button class="glider-pre">
-                  <i class="bi bi-arrow-left"></i>
-                </button>
-              </div>
-              <div class="Glider">
-                <div class="card mx-3 img-card border-0 shadow-sm">
-                  <div class="">
-                    <img
-                      src="./images/1015293_OJ91BD0.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/beautiful-smiling-asian-girl-showing-thumb-up-approve-smth-good-agree-recommending-company-brand-sta.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow-sm">
-                  <div class="">
-                    <img
-                      src="./images/10782951_19199360.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/business-finance-employment-female-successful-entrepreneurs-concept-friendly-smiling-office-manager-greeting-new-coworker-businesswoman-welcome-clients-with-hand-wave-hold-laptop.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow-sm">
-                  <div class="">
-                    <img
-                      src="./images/12063795_4884785.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/business-finance-employment-female-successful-entrepreneurs-concept-professional-asian-businesswoman-glasses-having-lunch-drinking-takeaway-coffee-using-mobile-phone.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow-sm">
-                  <div class="">
-                    <img
-                      src="./images/21585996_Na_Nov_02.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/glad-fashionable-woman-dressed-checkered-jacket-browses-internet-modern-device-sends-text-messages-via-smartphone-has-glad-expression-isolated-pink-background-technologies-concept.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card border-0 shadow-sm">
-                  <div class="">
-                    <img
-                      src="./images/28694857_frontend_online_1.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-                <div class="card me-3 img-card">
-                  <div class="">
-                    <img
-                      src="./images/business-people-holding-word-careers.jpg"
-                      alt=""
-                      class="item-img"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="my-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eligendi, cum! Doloribus sapiente animi eveniet aliquid,
-                      enim numquam libero nesciunt et?
-                    </p>
-                  </div>
-                  <div
-                    class="card-footer bg-white d-flex justify-content-between align-items-center py-3"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <img
-                        src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
-                        alt=""
-                        class="avater-img"
-                      />
-                      <p class="mb-0 ms-2">JustinBiber</p>
-                    </div>
-                    <a
-                      href="DetailCourse.html"
-                      class="FullCourse-Btn btn btn-primary"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="glider-width">
-                <button class="glider-nex">
-                  <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-              <div class="dots"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="Blog">
-      <div class="container">
-        <div class="row min-vh-100 justify-content-center align-content-center">
-          <div class="col-12">
-            <div class="text-center my-5 slide-down text-uppercase">
-              <h3 class="cus-font">Recommend to you</h3>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-3 slide-down">
-            <div class="card border-0 shadow-sm rounded-3 blog-card">
-              <div class="">
-                <img
-                  src="./images/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation.jpg"
-                  alt=""
-                  class="w-100 blog-img"
-                />
-              </div>
-              <div class="card-body">
-                <p class="">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae eum neque quia provident? Eveniet necessitatibus
-                  nobis accusantium dolore deleniti, praesentium omnis ea fuga
-                  incidunt quisquam suscipit voluptatum reiciendis? Sequi,
-                  tempore.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-3 slide-down">
-            <div
-              class="card border-0 shadow-sm rounded-3 mt-0 mt-lg-0 blog-card"
-            >
-              <div class="">
-                <img
-                  src="./images/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room.jpg"
-                  alt=""
-                  class="w-100 blog-img"
-                />
-              </div>
-              <div class="card-body">
-                <p class="">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae eum neque quia provident? Eveniet necessitatibus
-                  nobis accusantium dolore deleniti, praesentium omnis ea fuga
-                  incidunt quisquam suscipit voluptatum reiciendis? Sequi,
-                  tempore.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-3 slide-down">
-            <div
-              class="card border-0 shadow-sm rounded-3 mt-4 mt-lg-0 blog-card"
-            >
-              <div class="">
-                <img
-                  src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg"
-                  alt=""
-                  class="w-100 blog-img"
-                />
-              </div>
-              <div class="card-body">
-                <p class="">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae eum neque quia provident? Eveniet necessitatibus
-                  nobis accusantium dolore deleniti, praesentium omnis ea fuga
-                  incidunt quisquam suscipit voluptatum reiciendis? Sequi,
-                  tempore.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="mb-150 mt-5 mt-lg-0">
-      <div class="container">
-        <div class="row text-center justify-content-center mb-5">
-          <div class="col-lg-5 col-xl-6">
-            <div>
-              <h4>Frequently Asked Questions</h4>
-              <p class="text-black-50 my-3">
-                Our aim is to make it quick and easy for you to access your
-                favourite websites. Your bookmarks sync between your devices so
-                you can access them on the go.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div>
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseOne"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseOne"
-                    >
-                      What is Bookmark?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseOne"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingOne"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended
-                      to demonstrate the <code>.accordion-flush</code> class.
-                      This is the first item's accordion body.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseTwo"
-                    >
-                      How can I request a new browser?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingTwo"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended
-                      to demonstrate the <code>.accordion-flush</code> class.
-                      This is the second item's accordion body. Let's imagine
-                      this being filled with some actual content.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseThree"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseThree"
-                    >
-                      Is there a mobile app?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingThree"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended
-                      to demonstrate the <code>.accordion-flush</code> class.
-                      This is the third item's accordion body. Nothing more
-                      exciting happening here in terms of content, but just
-                      filling up the space to make it look, at least at first
-                      glance, a bit more representative of how this would look
-                      in a real-world application.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFour"
-                    >
-                      What about other Chromium browsers?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFour"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended
-                      to demonstrate the <code>.accordion-flush</code> class.
-                      This is the third item's accordion body. Nothing more
-                      exciting happening here in terms of content, but just
-                      filling up the space to make it look, at least at first
-                      glance, a bit more representative of how this would look
-                      in a real-world application.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=""></div>
-        <button class="btn btn-primary d-block mx-auto mt-5">More Info</button>
-      </div>
-    </section>
-    <section class="container-fluid">
-      <div class="row text-center justify-content-center bg-light">
-        <div class="col-lg-5 col-xl-3">
-          <div>
-            <p class="text-black-50 mb-4 mt-5">35,000+ already joined</p>
-            <h3 class="text-black mb-4">
-              Stay up-to-date with what we’re doing
-            </h3>
-          </div>
-          <div
-            class="d-flex flex-column flex-lg-row mb-5 justify-content-center"
-          >
-            <div class="me-3 mb-4 mb-lg-0">
-              <input type="text" class="form-control" />
-            </div>
-            <div>
-              <a href="#" class="btn btn-danger">Contact us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <!-- <footer class=" bg-dark">
-      <div class=" container">
-        <div class=" row pt-4 pb-2">
-          <div class="col-lg-2 ">
-            <div class=" text-center mb-3 mb-lg-0">
-            <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path style="fill: #fff;" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg>
-            </div>
-          </div>
-          <div class="col-lg-6 ">
-            <div class=" d-flex flex-column flex-lg-row text-center justify-content-lg-start">
-              <a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">Features</a>
-              <a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">Pricing</a>
-              <a href="#" class=" text-uppercase text-decoration-none text-white me-0 mb-3 mb-lg-0 me-lg-5 icon-hover">contact</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class=" d-flex justify-content-center flex-column flex-lg-row justify-content-lg-end ">
-              <a href="#" class="  btn border-0 "><img src="./images/icon-facebook.svg" alt="" height="20px" class=" me-0 me-lg-5 mb-3"></a>
-              <a href="#" class="  btn border-0"><img src="./images/icon-twitter.svg" alt="" height="20px" class=" me-0 me-lg-5 mb-3 "></a>
-            </div>
-          </div>
+				</div>
+			</div>
+		</footer> -->
 
-        </div>
-      </div>
-    </footer> -->
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script type="module" src="/main.js"></script>
-    
-  </body>
-  <script>
-    let loader = document.getElementById("loader");
-    window.addEventListener("load", function () {
-      loader.style.display = "none";
-    });
-  </script>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<script type="module" src="/main.js"></script>
+		
+	</body>
+	<script>
+		let loader = document.getElementById("loader");
+		window.addEventListener("load", function () {
+			loader.style.display = "none";
+		});
+	</script>
 </html>

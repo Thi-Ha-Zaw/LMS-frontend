@@ -1,136 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
-    <style>
-        /* .img-card{
-            transition: 50ms;
-            transition-duration: 80ms;
-        } */
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Courses</title>
+		<style>
+				/* .img-card{
+						transition: 50ms;
+						transition-duration: 80ms;
+				} */
 
-        /* .img-card:hover{
-            transform: translateY(-20px);
-        } */
-    </style>
+				/* .img-card:hover{
+						transform: translateY(-20px);
+				} */
+				#loader{
+		background: rgb(255, 255, 255) url("./images/preloader.gif") no-repeat center center!important;
+		min-width: 100%!important;
+		min-height: 100vh!important;
+		position: fixed!important;
+		z-index: 2000000!important;
+}
+		</style>
 </head>
 <body>
-    
-  <div id="loader"></div>
-  
-    <section class=" bg-light " id="popular-courses">
-        <div class=" container-fluid">
-          <div class="row min-vh-100 justify-content-center align-items-center  align-content-center slide-down">
-            <div class="col-12 text-center slide-down">
-                <h4 class=" text-uppercase mt-4 cus-font animate__animated animate__tada"> Courses of Ionic Solutions</h4>
-            </div>
-              <div class="row slide-down AllCourse-Row">
-                <div class="col-12 col-md-6 col-lg-3">
-                        <div class=" card me-3 img-card my-5 border-0 shadow">
-                          <div class="">
-                            <img src="./images/28694857_frontend_online_1.jpg" alt="" class="  item-img">
-                          </div>
-                          <div class=" card-body">
-                              <p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
-                          </div>
-                          <div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
-                            <div class=" d-flex justify-content-between align-items-center">
-                              <img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
-                              <p class=" mb-0 ms-2">JustinBiber </p>
-                            </div>
-                            <a href="DetailCourse.html" class="FullCourse-Btn btn btn-primary">
-                              View
-                            </a>
-                          </div>
-                        </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                        <div class=" card me-3 img-card my-5 border-0 shadow">
-                          <div class="">
-                            <img src="./images/business-people-holding-word-careers.jpg" alt="" class=" item-img">
-                          </div>
-                          <div class=" card-body">
-                              <p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
-                          </div>
-                          <div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
-                            <div class=" d-flex justify-content-between align-items-center">
-                              <img src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg" alt=""  class="avater-img">
-                              <p class=" mb-0 ms-2">JustinBiber </p>
-                            </div>
-                            <a href="DetailCourse.html" class="FullCourse-Btn btn btn-primary">
-                              View
-                            </a>
-                          </div>
-                        </div>
-                </div>
-              </div>
-          </div>
-      </div>
-    </section>
+		
+	<div id="loader"></div>
+	
+		<section class=" bg-light " id="popular-courses">
+				<div class=" container-fluid">
+					<div class="row min-vh-100 justify-content-center align-items-center  align-content-center slide-down">
+						<div class="col-12 text-center slide-down">
+								<h4 class=" text-uppercase mt-4 cus-font animate__animated animate__tada"> Courses of Ionic Solutions</h4>
+						</div>
+							<div class="row slide-down AllCourse-Row">
+								<div class="col-12 col-md-6 col-lg-3">
+												<div class=" card me-3 img-card my-5 border-0 shadow">
+													<div class="">
+														<img src="./images/28694857_frontend_online_1.jpg" alt="" class="  item-img">
+													</div>
+													<div class=" card-body">
+															<p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
+													</div>
+													<div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
+														<div class=" d-flex justify-content-between align-items-center">
+															<img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
+															<p class=" mb-0 ms-2">JustinBiber </p>
+														</div>
+														<a href="OverViewCourse.html" class="FullCourse-Btn btn btn-primary">
+															View
+														</a>
+													</div>
+												</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-3">
+												<div class=" card me-3 img-card my-5 border-0 shadow">
+													<div class="">
+														<img src="./images/business-people-holding-word-careers.jpg" alt="" class=" item-img">
+													</div>
+													<div class=" card-body">
+															<p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
+													</div>
+													<div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
+														<div class=" d-flex justify-content-between align-items-center">
+															<img src="./images/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg" alt=""  class="avater-img">
+															<p class=" mb-0 ms-2">JustinBiber </p>
+														</div>
+														<a href="OverViewCourse.html" class="FullCourse-Btn btn btn-primary">
+															View
+														</a>
+													</div>
+												</div>
+								</div>
+							</div>
+					</div>
+			</div>
+		</section>
 
-    <script type="module" src="/main.js"></script>
-    <script src="Course.js"></script>
-    <script>
-      const Row = document.querySelector(".AllCourse-Row");
-      
-      CourseImg.map(function(value){
-        let Div = document.createElement("div");
-        Div.classList.add("col-12","col-md-6","col-lg-3")
-        Div.innerHTML = `
-                          <div class=" card me-3 img-card my-5 border-0 shadow">
-                            <div class="">
-                              <img src=${value.image} alt="" class="  item-img">
-                            </div>
-                            <div class=" card-body">
-                                <p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
-                            </div>
-                            <div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
-                              <div class=" d-flex justify-content-between align-items-center">
-                                <img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
-                                <p class=" mb-0 ms-2">JustinBiber </p>
-                              </div>
-                              <a href="DetailCourse.html" class="FullCourse-Btn btn btn-primary">
-                                View
-                              </a>
-                            </div>
-                          </div>
-                      `;
+		<script type="module" src="/main.js"></script>
+		<script src="Course.js"></script>
+		<script>
+			const Row = document.querySelector(".AllCourse-Row");
+			
+			CourseImg.map(function(value){
+				let Div = document.createElement("div");
+				Div.classList.add("col-12","col-md-6","col-lg-3")
+				Div.innerHTML = `
+			<div class=" card me-3 img-card my-5 border-0 shadow">
+				<div class="">
+					<img src=${value.image} alt="" class="  item-img">
+				</div>
+				<div class=" card-body">
+						<p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
+				</div>
+				<div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
+					<div class=" d-flex justify-content-between align-items-center">
+						<img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
+						<p class=" mb-0 ms-2">JustinBiber </p>
+					</div>
+					<a href="OverViewCourse.html" class="FullCourse-Btn btn btn-primary">
+						View
+					</a>
+				</div>
+			</div>
+	`;
 
-        Row.append(Div)
-      })
-     
+				Row.append(Div)
+			})
+		 
 
-      let Div = document.createElement("div");
-      Div.classList.add("col-12","col-md-6","col-lg-3")
-      Div.innerHTML = `
-                        <div class=" card me-3 img-card my-5 border-0 shadow">
-                          <div class="">
-                            <img src="./images/28694857_frontend_online_1.jpg" alt="" class="  item-img">
-                          </div>
-                          <div class=" card-body">
-                              <p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
-                          </div>
-                          <div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
-                            <div class=" d-flex justify-content-between align-items-center">
-                              <img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
-                              <p class=" mb-0 ms-2">JustinBiber </p>
-                            </div>
-                            <a href="DetailCourse.html" class="FullCourse-Btn btn btn-primary">
-                              View
-                            </a>
-                          </div>
-                        </div>
-                    `;
-    </script>
+			let Div = document.createElement("div");
+			Div.classList.add("col-12","col-md-6","col-lg-3")
+			Div.innerHTML = `
+					<div class=" card me-3 img-card my-5 border-0 shadow">
+						<div class="">
+							<img src="./images/28694857_frontend_online_1.jpg" alt="" class="  item-img">
+						</div>
+						<div class=" card-body">
+								<p class=" my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum! Doloribus sapiente animi eveniet aliquid, enim numquam libero nesciunt et?</p>
+						</div>
+						<div class=" card-footer bg-white d-flex justify-content-between align-items-center py-3">
+							<div class=" d-flex justify-content-between align-items-center">
+								<img src="./images/tender-touched-woman-closes-eyes-keeps-hand-near-heart-happy-receive-gift-recalls-lovely-date-has-dyed-pink-hair-dressed-casually.jpg" alt=""  class="avater-img">
+								<p class=" mb-0 ms-2">JustinBiber </p>
+							</div>
+							<a href="OverViewCourse.html" class="FullCourse-Btn btn btn-primary">
+								View
+							</a>
+						</div>
+					</div>
+			`;
+		</script>
 
-    
+		
 </body>
 <script>
-  let loader = document.getElementById("loader");
-  window.addEventListener("load", function () {
-    loader.style.display = "none";
-  });
+	let loader = document.getElementById("loader");
+	window.addEventListener("load", function () {
+		loader.style.display = "none";
+	});
 </script>
 </html>

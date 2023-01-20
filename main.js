@@ -17,7 +17,7 @@ import 'animate.css';
 //     // cursorChar: '|',
 //   });
 
-
+	
 
   let slideDown = {
     distance: '50px',
